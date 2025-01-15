@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrierung - Web Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Registrierung</h1>
+<form id="registrationForm">
+  <label for="firstName">Vorname:</label>
+  <input type="text" id="firstName" maxlength="20" pattern="[A-Za-z-_]+" required><br><br>
+
+  <label for="lastName">Nachname:</label>
+  <input type="text" id="lastName" maxlength="20" pattern="[A-Za-z-_]+" required><br><br>
+
+  <label for="username">Benutzername:</label>
+  <input type="text" id="username" pattern="[A-Za-z-_]+" required><br><br>
+
+  <label for="password">Passwort:</label>
+  <input type="password" id="password" minlength="8"
+         pattern="^(?=.*[0-9])(?=.*[!#,+-_?]).{8,}$" required><br><br>
+
+  <label>Geschlecht:</label><br>
+  <input type="radio" id="male" name="gender" value="Männlich" required>
+  <label for="male">Männlich</label><br>
+  <input type="radio" id="female" name="gender" value="Weiblich" required>
+  <label for="female">Weiblich</label><br>
+  <input type="radio" id="other" name="gender" value="Divers" required>
+  <label for="other">Divers</label><br><br>
+
+  <label for="category">Interessenkategorie:</label>
+  <select id="category" required>
+    <option value="HTML5">HTML5</option>
+    <option value="CSS">CSS</option>
+    <option value="JavaScript">JavaScript</option>
+  </select><br><br>
+
+  <label for="comments">Kommentare:</label>
+  <textarea id="comments" maxlength="100"></textarea><br><br>
+
+  <input type="checkbox" id="terms" required>
+  <label for="terms">Ich akzeptiere die Nutzungsbedingungen</label><br><br>
+
+  <button type="button" onclick="registerUser()">Registrieren</button>
+</form>
+
+<script src="scripts.js"></script>
+</body>
+</html>

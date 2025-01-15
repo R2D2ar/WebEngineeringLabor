@@ -1,0 +1,20 @@
+[
+  {
+    "firstName": "Montgomery",
+    "lastName": "Blueberry",
+    "username": "monte",
+    "password": "berry",
+    "gender": "Männlich",
+    "category": "HTML5",
+    "comments": "Keine"
+  },
+  {
+    "firstName": "werwe",
+    "lastName": "sdafsd",
+    "username": "wetwet",
+    "password": "asdfasd342",
+    "gender": "Männlich",
+    "category": "HTML5",
+    "comments": "asdf"
+  }
+]

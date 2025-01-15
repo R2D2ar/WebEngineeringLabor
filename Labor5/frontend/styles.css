@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.topic {
+    display: none;
+    z-index: -1;
+    position: absolute;
+}
+
+#HTML5 {
+    background-color: lightblue;
+}
+
+#CSS {
+    background-color: lightgreen;
+}
+
+#JavaScript {
+    background-color: lightyellow;
+}
+
+.topic[style*="z-index: 10"] {
+    display: block;
+    z-index: 10;
+}
