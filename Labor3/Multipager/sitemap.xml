@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <!-- standard -->
+
+    <url>
+        <loc>http://localhost:63342/Labor3/Multipager/index.html/</loc>
+        <lastmod>2025-01-18</lastmod> <!-- YYYY-MM-DD -->
+        <changefreq>never</changefreq>
+        <priority>0.9</priority> <!-- from 0.0 (lowest priority) to 1.0 (highest priority) -->
+    </url>
+
+    <url>
+        <loc>http://localhost:63342/Labor3/Multipager/historia/historia.html/</loc>
+        <lastmod>2025-01-18</lastmod> <!-- YYYY-MM-DD -->
+        <changefreq>never</changefreq>
+        <priority>0.5</priority> <!-- default -->
+    </url>
+
+    <url>
+        <loc>http://localhost:63342/Labor3/Multipager/usus/usus.html/</loc>
+        <lastmod>2025-01-18</lastmod> <!-- YYYY-MM-DD -->
+        <changefreq>never</changefreq>
+        <priority>0.5</priority> <!-- default -->
+    </url>
+
+    <url>
+        <loc>http://localhost:63342/Labor3/Multipager/critica/critica.html/</loc>
+        <lastmod>2025-01-18</lastmod> <!-- YYYY-MM-DD -->
+        <changefreq>never</changefreq>
+        <priority>0.5</priority> <!-- default -->
+    </url>
+
+    <url>
+        <loc>http://localhost:63342/Labor3/Multipager/futura/futura.html/</loc>
+        <lastmod>2025-01-18</lastmod> <!-- YYYY-MM-DD -->
+        <changefreq>never</changefreq>
+        <priority>0.5</priority> <!-- default -->
+    </url>
+
+</urlset>
