@@ -1,10 +1,9 @@
 <!ELEMENT dokument (ueberschrift, absatz+, leerzeile?)>
         <!ELEMENT ueberschrift (#PCDATA)>
-        <!ELEMENT absatz (#PCDATA|fett|kursiv|normal)*>
+        <!ELEMENT absatz (fett|kursiv|normal)*>
         <!ELEMENT leerzeile EMPTY>
 
         <!ELEMENT fett (#PCDATA)>
         <!ELEMENT kursiv (#PCDATA)>
         <!ELEMENT normal (#PCDATA)>
-
         <!ENTITY nbsp "&#160;">
