@@ -1,0 +1,31 @@
+dokument {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+ueberschrift {
+    margin: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #0000ff;
+}
+
+absatz {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+normal {
+    font-weight: normal;
+}
+
+fett {
+    font-weight: bold;
+}
+
+kursiv {
+    font-style: italic;
+}
