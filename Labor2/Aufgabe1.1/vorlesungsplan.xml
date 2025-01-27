@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vorlesungsplan SYSTEM
+        "\\wsl.localhost\Ubuntu-20.04\home\johanna\Labor\WebEngineering\WebEngineeringLabor\Labor2\Aufgabe1.1\vorlesungsplan.dtd">
+<vorlesungsplan xmlns:modul="http://example.com/modul" xmlns:vorlesung="http://example.com/vorlesung">
+    <semester>
+        <modul>
+            <modul:titel>Programmierung 1</modul:titel>
+            <vorlesung:titel>Grundlagen der Programmierung</vorlesung:titel>
+            <dozent>Prof. Dr. Müller</dozent>
+            <zeit>Montag, 10:00 - 12:00</zeit>
+            <raum>Raum A101</raum>
+        </modul>
+        <modul>
+            <modul:titel>Mathematik 1</modul:titel>
+            <vorlesung:titel>Lineare Algebra</vorlesung:titel>
+            <dozent>Dr. Schmidt</dozent>
+            <zeit>Mittwoch, 14:00 - 16:00</zeit>
+            <raum>Raum B202</raum>
+        </modul>
+    </semester>
+    <kommentar>Dies ist der Vorlesungsplan für das Wintersemester 2025.</kommentar>
+</vorlesungsplan>
