@@ -1,0 +1,13 @@
+<!ELEMENT vorlesungsplan (semester+, kommentar?)>
+        <!ATTLIST vorlesungsplan
+                xmlns:modul CDATA #REQUIRED
+                xmlns:vorlesung CDATA #REQUIRED>
+
+        <!ELEMENT semester (modul+)>
+        <!ELEMENT modul (modul:titel, vorlesung:titel, dozent, zeit, raum)>
+        <!ELEMENT modul:titel (#PCDATA)>
+        <!ELEMENT vorlesung:titel (#PCDATA)>
+        <!ELEMENT dozent (#PCDATA)>
+        <!ELEMENT zeit (#PCDATA)>
+        <!ELEMENT raum (#PCDATA)>
+        <!ELEMENT kommentar (#PCDATA)>
