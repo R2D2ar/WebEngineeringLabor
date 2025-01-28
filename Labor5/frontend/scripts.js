@@ -1,11 +1,35 @@
-// Registrierung
-function registerUser() {
-    const form = document.getElementById('registrationForm');
+function checkPassword() {
+    const passwordField = document.getElementById('password');
+    const password = passwordField.value;
+    const passwordRegex = /^(?=.*\d)(?=.*[!#,+\-_?])[a-zA-Z\d!#,+\-_?]{8,}$/; // Require at least 8 characters, 1 number, and 1 symbol from "!#,+-_?"
+    console.log(password)
+    console.log(passwordRegex.test(password))
+    if (!passwordRegex.test(password)) {
+        alert('Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl sowie ein Sonderzeichen aus "!#,+-_?" enthalten.');
+        passwordField.setCustomValidity('Das Passwort erfüllt die Kriterien nicht.');
+        passwordField.reportValidity();
+        return false;
+    } else {
+        passwordField.setCustomValidity('');
+    }
+    return true;
+}
+
+
+function checkValidity() {
+    const form = document.querySelector('#registrationForm form');
     if (!form.checkValidity()) {
         alert('Bitte füllen Sie alle Felder korrekt aus.');
-        return;
+        return false;
     }
+    return checkPassword();
+}
 
+// Registrierung
+function registerUser() {
+    if (!checkValidity()) return;
+
+    const form = document.querySelector('#registrationForm form');
     const userData = {
         firstName: form.firstName.value,
         lastName: form.lastName.value,

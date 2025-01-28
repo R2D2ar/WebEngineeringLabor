@@ -4,24 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Web Engineering</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-<h1>Web Engineering – Labor Prof. Dr. J. Schneider</h1>
-<p>Willkommen! Bitte melden Sie sich an:</p>
+<div id="loginForm">
+  <h1>Web Engineering – Labor Prof. Dr. J. Schneider</h1>
+  <p>Willkommen! Bitte melden Sie sich an:</p>
 
-<form id="loginForm">
-  <label for="username">Benutzername:</label>
-  <input type="text" id="username" required><br><br>
+  <form>
+    <label for="username">Benutzername:</label>
+    <input type="text" id="username" required>
 
-  <label for="password">Passwort:</label>
-  <input type="password" id="password" required><br><br>
+    <label for="password">Passwort:</label>
+    <input type="password" id="password" required>
 
-  <button type="button" onclick="loginUser()">Login</button>
-</form>
+    <button type="button" onclick="loginUser()">Login</button>
+  </form>
 
-<p>Noch keinen Account? <a href="register.html">Registrieren</a></p>
+  <div class="register-link">
+    <p>Noch keinen Account? <a href="./register.html">Registrieren</a></p>
+  </div>
+</div>
 
-<script src="scripts.js"></script>
+<script src="./scripts.js"></script>
 </body>
 </html>
