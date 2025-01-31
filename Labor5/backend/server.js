@@ -23,6 +23,7 @@ app.post('/register', (req, res) => {
         }
 
         const users = JSON.parse(data);
+        console.log(users)
         users.push(newUser); // Füge den neuen Benutzer hinzu
 
         // Schreibe die aktualisierte Datei

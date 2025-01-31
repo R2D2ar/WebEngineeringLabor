@@ -1,45 +1,90 @@
-function checkPassword() {
-    const passwordField = document.getElementById('password');
-    const password = passwordField.value;
-    const passwordRegex = /^(?=.*\d)(?=.*[!#,+\-_?])[a-zA-Z\d!#,+\-_?]{8,}$/; // Require at least 8 characters, 1 number, and 1 symbol from "!#,+-_?"
-    console.log(password)
-    console.log(passwordRegex.test(password))
-    if (!passwordRegex.test(password)) {
-        alert('Das Passwort muss mindestens 8 Zeichen lang sein und mindestens eine Zahl sowie ein Sonderzeichen aus "!#,+-_?" enthalten.');
-        passwordField.setCustomValidity('Das Passwort erfüllt die Kriterien nicht.');
-        passwordField.reportValidity();
+function checkPassword(password) {
+
+    console.log(password);
+
+    // Validate password
+    if (password.length < 8) {
+        alert('Das Passwort muss mindestens 8 Zeichen lang sein.');
         return false;
-    } else {
-        passwordField.setCustomValidity('');
+    }
+
+    let hasNumber = false;
+    let hasSpecialChar = false;
+    const specialChars = "!#,+-_?";
+
+    // Check if password contains at least one number and one special character
+    for (let i = 0; i < password.length; i++) {
+        const char = password[i];
+
+        if (/\d/.test(char)) { // Check if character is a number
+            hasNumber = true;
+        }
+
+        if (specialChars.includes(char)) { // Check if character is a special character
+            hasSpecialChar = true;
+        }
+    }
+
+    // Final validation check
+    if (!hasNumber || !hasSpecialChar) {
+        alert('Das Passwort muss mindestens eine Zahl sowie ein Sonderzeichen aus "!#,+-_?" enthalten.');
+        return false;
     }
     return true;
 }
 
-
-function checkValidity() {
-    const form = document.querySelector('#registrationForm form');
-    if (!form.checkValidity()) {
-        alert('Bitte füllen Sie alle Felder korrekt aus.');
-        return false;
-    }
-    return checkPassword();
-}
-
-// Registrierung
 function registerUser() {
-    if (!checkValidity()) return;
 
     const form = document.querySelector('#registrationForm form');
+    // Validate if the entries were made
     const userData = {
         firstName: form.firstName.value,
         lastName: form.lastName.value,
         username: form.username.value,
-        password: form.password.value,
         gender: form.gender.value,
-        category: form.category.value,
-        comments: form.comments.value
+        category: form.category.value
     };
+    console.log(userData)
 
+    // Validate the fields
+    for (const field in userData) {
+        if (!userData[field]) {
+            alert(`Bitte füllen Sie das Feld "${field}" aus.`);
+            return;
+        }
+    }
+
+    // Was the checkbox checked?
+    const isChecked = form.terms.checked;
+    console.log(isChecked);
+
+    if (!isChecked) {
+        alert('Bitte stimmen sie den Nutzungsbedingungen zu.');
+        return
+    }
+
+    const inputRegex = /^[A-Za-z-_]+$/;
+    const fieldNames = ["firstName", "lastName", "username"];
+
+    for (let i = 0; i < fieldNames.length; i++) {
+        const fieldName = fieldNames[i];
+        const input = userData[fieldName]; // Get the value for the field
+
+        if (!inputRegex.test(input)) {
+            alert(`Ungültige Eingabe im Feld: ${fieldName}. Bitte verwenden Sie nur Buchstaben, Bindestriche (-) oder Unterstriche (_).`);
+            return;
+        }
+    }
+
+
+    //Check the password
+    const password = form.password.value;
+    if(!checkPassword(password)) return;
+
+    userData.password = password;
+    userData.comments = form.comments.value;
+
+    // Submit registration data
     fetch('/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

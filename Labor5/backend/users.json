@@ -2,55 +2,10 @@
   {
     "firstName": "Artur",
     "lastName": "Lazarski",
-    "username": "r2d2",
-    "password": "2341432143244124",
-    "gender": "Weiblich",
-    "category": "HTML5",
-    "comments": "weqre"
-  },
-  {
-    "firstName": "Artur1",
-    "lastName": "Lazarski",
-    "username": "asdf",
-    "password": "asdfasf3",
+    "username": "r_d_",
     "gender": "Männlich",
     "category": "HTML5",
-    "comments": "asdf"
-  },
-  {
-    "firstName": "dsa",
-    "lastName": "asd",
-    "username": "asd",
-    "password": "asdadddd1",
-    "gender": "Männlich",
-    "category": "HTML5",
-    "comments": "asd"
-  },
-  {
-    "firstName": "test",
-    "lastName": "test",
-    "username": "testtes",
-    "password": "test1234",
-    "gender": "Männlich",
-    "category": "HTML5",
-    "comments": ""
-  },
-  {
-    "firstName": "test",
-    "lastName": "test",
-    "username": "test",
-    "password": "testtetst1",
-    "gender": "Männlich",
-    "category": "HTML5",
-    "comments": "test"
-  },
-  {
-    "firstName": "test",
-    "lastName": "test",
-    "username": "test",
-    "password": "testtestt1",
-    "gender": "Männlich",
-    "category": "JavaScript",
-    "comments": "test"
+    "password": "12345678!Bb",
+    "comments": "Test kommentar"
   }
 ]
